@@ -328,7 +328,7 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
-			width: 33.33333%;
+			width: 33.333665%;
 		}
 
 		.row > .off-4 {
@@ -2611,7 +2611,7 @@ input, select, textarea {
 	padding: 18px;
 	width: 100%;
 	border: none;
-	text-align: left;
+	text-align: center;
 	outline: none;
 	font-size: 15px;
   }

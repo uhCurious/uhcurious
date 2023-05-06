@@ -1742,7 +1742,7 @@ input, select, textarea {
 			margin-bottom: 0;
 		}
 
-/* Image */
+/*  fit */
 
 	.image {
 		display: inline-block;
@@ -2253,8 +2253,9 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				margin-left: 300px;
+				margin-left: 5500px;
 			}
+		
 
 		/* Main */
 
@@ -2648,4 +2649,24 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #D7D3D3; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

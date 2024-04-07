@@ -1,0 +1,18 @@
+function checkForNewImages() {
+    fetch('check_for_new_images.php')
+    .then(response => response.json())
+    .then(data => {
+        if (data.length > 0) {
+            // Update gallery with new images
+            data.forEach(image => {
+                // Add image to gallery
+                const imgElement = document.createElement('img');
+                imgElement.src = 'path/to/gallery/folder/' + image;
+                document.getElementById('gallery').appendChild(imgElement);
+            });
+        }
+    });
+}
+
+// Periodically check for new images
+setInterval(checkForNewImages, 5000); // Check every 5 seconds

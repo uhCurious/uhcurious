@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Photo Gallery</title>
+<style>
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+    <!-- Images will be dynamically added here from the assets folder -->
+</div>
+
+<script>
+    const galleryContainer = document.querySelector('.gallery');
+    const assetsPath = 'assets/';
+    const imageFileNames = [
+        'image1.png',
+        'image2.jpg',
+        'image3.jpg',
+        // Add more image filenames here as needed
+    ];
+
+    imageFileNames.forEach(fileName => {
+        const src = assetsPath + fileName;
+        const imageElement = document.createElement('img');
+        imageElement.setAttribute('src', src);
+        galleryContainer.appendChild(imageElement);
+    });
+</script>
+
+</body>
+</html>

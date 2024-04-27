@@ -36,6 +36,24 @@ body {
   background-color: black;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 </style>
@@ -46,20 +64,37 @@ body {
 <b2>See boss spawn location and much more <a href="https://tarkov-changes.com/maps">here.</b2></a>
 <br>
 </br>
-<div class="dropdown">
-  <img src="/tarkov/assets/customs.png" onclick="this.src='/tarkov/assets/ground zero.png'" alt="Customs" width="882" height="auto">
-  <div class="dropdown-content">
-  <div class="desc">(1) ZoneDormitory  - 2/3 Story Dorms</div>
-  <div class="desc">(2) ZoneGasStation - New Gas Station</div>
-  <div class="desc">(2) ZoneScavBase   - Fortress</div>
-  <a href="link.com" target="_blank" div class="desc">Click me to open a fullsize annotated map, alternatively click on the map image</div></a>
-  </div>
-
-<div class="dropdown">
-    <img src="/tarkov/assets/ground zero.png" alt="Ground Zero" width="882" height="auto">
-    <div class="dropdown-content">
-    <div class="desc">(1) ZoneSandbox  - </div>
-    <a href="link.com" target="_blank" div class="desc">Click me to open a fullsize annotated map, alternatively click on the map image</div></a>
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <h2>Column 1</h2>
+      <p>Some text..</p>
     </div>
+    <div class="column" style="background-color:#bbb;">
+      <h2>Column 2</h2>
+      <p>Some text..</p>
+    </div>
+  </div>
+<div class="row">
+    <div class="column" style="background-color:#242323;">
+        <div class="dropdown">
+            <img src="/tarkov/assets/customs.png" onclick="this.src='/tarkov/assets/ground zero.png'" alt="Customs" width="882" height="auto">
+                <div class="dropdown-content">
+                    <div class="desc">(1) ZoneDormitory  - 2/3 Story Dorms</div>
+                    <div class="desc">(2) ZoneGasStation - New Gas Station</div>
+                    <div class="desc">(2) ZoneScavBase   - Fortress</div>
+                    <a href="link.com" target="_blank" div class="desc">Click me to open a fullsize annotated map, alternatively click on the map image</div></a>
+        </div>
+    </div>
+</div>   
 
+<div class="row">
+    <div class="column" style="background-color:#242323;">
+        <div class="dropdown">
+            <img src="/tarkov/assets/ground zero.png" alt="Ground Zero" width="882" height="auto">
+                <div class="dropdown-content">
+                <div class="desc">(1) ZoneSandbox  - </div>
+                <a href="link.com" target="_blank" div class="desc">Click me to open a fullsize annotated map, alternatively click on the map image</div></a>
+        </div>
+    </div>
+</div>  
 </body>

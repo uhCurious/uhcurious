@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="assets/css/index.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="bg"></div>
@@ -29,14 +30,40 @@
 							</ul>
 						</nav>
 					</header>
+	<main>
+		<div id="music-player">
+		<select id="song-selector">
+			<option value="/assets/audio/d4vd - Here With Me.mp3">Here with Me</option>
+			<option value="/assets/audio/Frank Ocean - Pink + White.mp3">Pink + White</option>			
+		</select>
+			<audio controls id="audio-player">
+			<source src="/assets/audio/d4vd - Here With Me.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+	</main>
 
-				<!-- Footer -->
+
 					<footer id="footer">
 						<span class="copyright">&copy; Site made by uhCurious</span>
 					</footer>
 
 			</div>
 		</div>
+	<!-- Java -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var songSelector = document.getElementById("song-selector");
+				var audioPlayer = document.getElementById("audio-player");
+	
+				// Event listener for when the dropdown selection changes
+				songSelector.addEventListener("change", function() {
+					var selectedSong = songSelector.value;
+					audioPlayer.src = selectedSong;
+					audioPlayer.play(); // Optional: Automatically start playing the selected song
+				});
+			});
+		</script>
 		<script>
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
